@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.shape.Rectangle?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+
+<AnchorPane fx:id="AnchorPane" nodeOrientation="INHERIT" onDragDetected="#makeDragable" pickOnBounds="true" prefHeight="700" prefWidth="1200.0" style="-fx-background-color:#42476c;" styleClass="background" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Notebook_UI_Controller">
+    <children>
+        <Label focusTraversable="false" layoutX="180.0" layoutY="14.0" text="NoteBook" style="-fx-font-family: 'Trebuchet MS'" textFill="snow">
+            <font>
+                <Font size="42.0" />
+            </font>
+        </Label>
+        
+        <Button fx:id="minButton" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="60.0" layoutY="27.0" mnemonicParsing="false" onAction="#minScreen" prefHeight="19.0" prefWidth="20.0" styleClass="minimize" stylesheets="@Style.css" text="—">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <font>
+                <Font name="System Bold" size="7.0" />
+            </font>
+        </Button>
+        <Button fx:id="closeButton" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="26.0" layoutY="27.0" mnemonicParsing="false" onAction="#closeScreen" prefHeight="19.0" prefWidth="20.0" styleClass="exit" text="X" textFill="WHITE">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <font>
+                <Font size="9.0" />
+            </font>
+        </Button>
+        <TextArea fx:id="noteArea" focusTraversable="false" layoutX="35.0" layoutY="76.0" prefHeight="587.0" prefWidth="1130.0" styleClass="noteArea" wrapText="true" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#42476c" height="20.0" layoutX="59.0" layoutY="648.0" stroke="TRANSPARENT" strokeType="INSIDE" width="1087.0">
+            <effect>
+                <DropShadow blurType="GAUSSIAN" color="#ffffff40" height="30.0" offsetY="-8.0" radius="14.5" width="30.0" />
+            </effect>
+        </Rectangle>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#42476c" height="553.0" layoutX="1145.0" layoutY="96.0" stroke="TRANSPARENT" strokeType="INSIDE" width="20.0">
+            <effect>
+                <DropShadow blurType="GAUSSIAN" color="#ffffff40" height="30.0" offsetX="-8.0" radius="14.5" width="30.0" />
+            </effect>
+        </Rectangle>
+        <BorderPane disable="true" layoutX="29.0" layoutY="67.0" prefHeight="605.0" prefWidth="1140.0" style="-fx-border-color: #42476c; -fx-border-width: 25; -fx-border-radius: 25px;" />
+        <Pane disable="true" layoutX="54.0" layoutY="93.0" prefHeight="555.0" prefWidth="1090.0" rotate="180" style="-fx-background-radius: 15px;" styleClass="innerPane" stylesheets="@Style.css">
+        </Pane>
+        <MenuButton id="dropDown" alignment="CENTER" focusTraversable="false" layoutX="856.0" layoutY="25.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="141.0" style="-fx-background-radius: 15;" styleClass="appearance" stylesheets="@style.css" text="Format" textAlignment="CENTER" textFill="SNOW">
+            <items>
+                <MenuItem mnemonicParsing="false" style="-fx-background-radius: 15; -fx-text-fill: #fffafa; -fx-pref-height: 42px; -fx-pref-width: 141px; -fx-alignment: center;" styleClass="dropColor">
+                    <graphic>
+                        <Pane prefHeight="42.0" prefWidth="0.0">
+                            <children>
+                                <ColorPicker id="colorPicker" fx:id="color_picker" focusTraversable="false" layoutX="75.0" layoutY="10.0" onAction="#change_color" prefHeight="22.0" prefWidth="50.0" promptText="Black" style="-fx-background-radius: 5px;" styleClass="colorPicker">
+                                    <effect>
+                                        <DropShadow blurType="GAUSSIAN" color="#191d2c" height="35.0" offsetX="4.0" offsetY="4.0" radius="17.0" width="35.0">
+                                            <input>
+                                                <DropShadow blurType="GAUSSIAN" color="#545d7d" height="35.0" offsetX="-2.5" offsetY="-2.5" radius="17.0" width="35.0" />
+                                            </input>
+                                        </DropShadow>
+                                    </effect>
+                                </ColorPicker>
+                                <Label layoutX="35.0" layoutY="13.0" text="Color" textFill="SNOW" />
+                            </children>
+                        </Pane>
+                    </graphic>
+                </MenuItem>
+                <MenuItem mnemonicParsing="false" style="-fx-background-radius: 15; -fx-alignment: center; -fx-text-fill: #fffafa; -fx-pref-height: 42px; -fx-pref-width: 141px;" styleClass="dropTextSize">
+                    <graphic>
+                        <Pane prefHeight="60.0" prefWidth="0.0">
+                            <children>
+                                <Slider fx:id="fontSlider" blockIncrement="100.0" focusTraversable="false" layoutX="10.0" layoutY="35.0" maxHeight="1.0" opacity="0.9" prefHeight="1.0" prefWidth="125.0" styleClass="fontSlider" stylesheets="@style.css" />
+                                <Label fx:id="fontSizeLabel" layoutX="45.0" layoutY="13.0" text="Font Size: 16" textFill="SNOW" />
+                            </children>
+                        </Pane>
+                    </graphic>
+                </MenuItem>
+            </items>
+            <effect>
+                <DropShadow blurType="GAUSSIAN" color="#333850" height="35.0" offsetX="7.0" offsetY="7.0" radius="17.0" width="35.0">
+                    <input>
+                        <DropShadow blurType="GAUSSIAN" color="#545d7d" height="35.0" offsetX="-4.0" offsetY="-4.0" radius="17.0" width="35.0" />
+                    </input>
+                </DropShadow>
+            </effect>
+        </MenuButton>
+        
+        <MenuButton fx:id="bgButton" alignment="CENTER" focusTraversable="false" layoutX="1008.0" layoutY="25.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="141.0" style="-fx-background-radius: 15;" styleClass="appearance" stylesheets="@style.css" text="Appearance" textAlignment="CENTER" textFill="SNOW">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#changeBGtoWhite" style="-fx-background-radius: 15; -fx-text-fill: #fffafa; -fx-pref-height: 42px; -fx-pref-width: 141px; -fx-alignment: center;" styleClass="appLight" text="Light">
+                    <graphic>
+                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="42.0" prefWidth="0.0">
+                            <children>
+                                <Label fx:id="lightMark" focusTraversable="false" layoutX="90.0" layoutY="11.0" text="☑" textFill="#008300">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </Pane>
+                    </graphic>
+                </MenuItem>
+                <MenuItem mnemonicParsing="false" onAction="#changeBGtoDark" style="-fx-background-radius: 15; -fx-alignment: center; -fx-text-fill: #fffafa; -fx-pref-height: 42px; -fx-pref-width: 141px;" styleClass="appDark" text="Dark">
+                    <graphic>
+                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="42.0" prefWidth="0.0">
+                            <children>
+                                <Label fx:id="darkMark" focusTraversable="false" layoutX="90.0" layoutY="11.0" text="☑" textFill="#008300">
+                                    <font>
+                                        <Font size="16.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </Pane>
+                    </graphic>
+                </MenuItem>
+            </items>
+            <effect>
+                <DropShadow blurType="GAUSSIAN" color="#333850" height="35.0" offsetX="7.0" offsetY="7.0" radius="17.0" width="35.0">
+                    <input>
+                        <DropShadow blurType="GAUSSIAN" color="#545d7d" height="35.0" offsetX="-4.0" offsetY="-4.0" radius="17.0" width="35.0" />
+                    </input>
+                </DropShadow>
+            </effect>
+        </MenuButton>
+        
+        <MenuButton alignment="CENTER" focusTraversable="false" layoutX="700.0" layoutY="25.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="141.0" style="-fx-background-radius: 15;" styleClass="fileButton" stylesheets="@style.css" text="File" textAlignment="CENTER" textFill="SNOW">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#open_text" style="-fx-background-radius: 15; -fx-text-fill: #fffafa; -fx-pref-height: 42px; -fx-pref-width: 141px; -fx-alignment: center;" styleClass="fileChooser" text="open">
+                </MenuItem>
+                <MenuItem mnemonicParsing="false" onAction="#save_text" style="-fx-background-radius: 15; -fx-alignment: center; -fx-text-fill: #fffafa; -fx-pref-height: 42px; -fx-pref-width: 141px;" styleClass="fileChooser" text="save">
+                </MenuItem>
+                <MenuItem mnemonicParsing="false" onAction="#save_text_as" style="-fx-background-radius: 15; -fx-alignment: center; -fx-text-fill: #fffafa; -fx-pref-height: 42px; -fx-pref-width: 141px;" styleClass="fileChooser" text="save as">
+                </MenuItem>
+            </items>
+            <effect>
+                <DropShadow blurType="GAUSSIAN" color="#333850" height="35.0" offsetX="7.0" offsetY="7.0" radius="17.0" width="35.0">
+                    <input>
+                        <DropShadow blurType="GAUSSIAN" color="#545d7d" height="35.0" offsetX="-4.0" offsetY="-4.0" radius="17.0" width="35.0" />
+                    </input>
+                </DropShadow>
+            </effect>
+        </MenuButton>
+        
+        <Button fx:id="homepageButton" onAction="#loadHomepage" focusTraversable="false" layoutX="110.0" layoutY="17.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="42.0">
+            <effect>
+                <DropShadow blurType="GAUSSIAN" color="#333850" height="35.0" offsetX="7.0" offsetY="7.0" radius="17.0" width="35.0">
+                    <input>
+                        <DropShadow blurType="GAUSSIAN" color="#545d7d" height="35.0" offsetX="-4.0" offsetY="-4.0" radius="17.0" width="35.0" />
+                    </input>
+                </DropShadow>
+            </effect>
+        </Button>
+        <FontAwesomeIconView fill="SNOW" disable="true" glyphName="HOME" layoutX="117.0" layoutY="48.0" size="30" />
+ 
+    </children>
+</AnchorPane>

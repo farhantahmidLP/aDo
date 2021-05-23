@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" onDragDetected="#makeDragable" onMousePressed="#cursorMove" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-radius: 30; -fx-background-color: #dbdbdb; -fx-border-radius: 30;" styleClass="signup_root" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Homepage_UI_Controller"> 
+
+    <children> 
+
+        <Label focusTraversable="false" layoutX="120.0" layoutY="10.0" style="-fx-font-family: 'Trebuchet MS'" text="aDo Home" textFill="grey"> 
+
+            <font> 
+
+                <Font size="42.0" /> 
+
+            </font> 
+
+        </Label> 
+
+        <TextField fx:id="changeTextBox" focusTraversable="false" layoutX="1200.0" layoutY="630.0" prefHeight="0.0" prefWidth="0.0" style="-fx-background-color: transparent;" /> 
+
+         
+
+        <Button fx:id="minButton" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="60.0" layoutY="27.0" mnemonicParsing="false" onAction="#minScreen" prefHeight="19.0" prefWidth="20.0" styleClass="minimize" stylesheets="@Style.css" text="—"> 
+
+            <cursor> 
+
+                <Cursor fx:constant="HAND" /> 
+
+            </cursor> 
+
+            <font> 
+
+                <Font name="System Bold" size="7.0" /> 
+
+            </font> 
+
+        </Button> 
+
+        <Button fx:id="closeButton" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="26.0" layoutY="27.0" mnemonicParsing="false" onAction="#closeScreen" prefHeight="19.0" prefWidth="20.0" styleClass="exit" text="X" textFill="WHITE"> 
+
+            <cursor> 
+
+                <Cursor fx:constant="HAND" /> 
+
+            </cursor> 
+
+            <font> 
+
+                <Font size="9.0" /> 
+
+            </font> 
+
+        </Button> 
+
+         
+
+        <Pane fx:id="Logout" layoutX="865.0" layoutY="480.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseEntered="#logoutHovered" onMouseExited="#logoutNotHovered" onMousePressed="#loadLogout" prefHeight="170.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(to bottom right, #c5c5c5, #eaeaea); -fx-background-radius: 20;" styleClass="Logout"> 
+
+            <children> 
+
+               
+
+                <Label focusTraversable="false" layoutX="20.0" layoutY="14.0" style="-fx-font-family: 'Trebuchet MS'" text="Logout" textFill="grey"> 
+
+                    <font> 
+
+                        <Font size="35.0" /> 
+
+                    </font> 
+
+                </Label> 
+
+                <Label fx:id="userLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" disable="true" focusTraversable="false" layoutX="26.0" layoutY="131.0" maxWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="260.0" style="-fx-font-family: 'Trebuchet MS'" text="userName" textAlignment="RIGHT" textFill="grey" textOverrun="CLIP"> 
+
+                    <font> 
+
+                        <Font size="20.0" /> 
+
+                    </font> 
+
+                </Label> 
+
+                <FontAwesomeIconView disable="true" fill="grey" glyphName="USER_CIRCLE" layoutX="190.0" layoutY="100.0" selectionEnd="1" selectionStart="1" size="60"> 
+
+                    <font> 
+
+                        <Font size="1.0" /> 
+
+                    </font> 
+
+                </FontAwesomeIconView> 
+
+            </children> 
+
+            <effect> 
+
+                <DropShadow blurType="GAUSSIAN" color="#bababa" height="50.0" offsetX="7.0" offsetY="7.0" radius="24.5" width="50.0"> 
+
+                    <input> 
+
+                        <DropShadow blurType="GAUSSIAN" color="#fcfcfc" height="50.0" offsetX="-7.0" offsetY="-7.0" radius="24.5" width="50.0" /> 
+
+                    </input> 
+
+                </DropShadow> 
+
+            </effect> 
+
+        </Pane> 
+
+        <Pane fx:id="TimePiece" layoutX="410.0" layoutY="480.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseEntered="#timepieceHovered" onMouseExited="#timepieceNotHovered" onMousePressed="#loadTimePiece" prefHeight="170.0" prefWidth="390.0" style="-fx-background-color: linear-gradient(to bottom right, #c5c5c5, #eaeaea); -fx-background-radius: 20;" styleClass="TimePiece"> 
+
+            <children> 
+
+                <Label focusTraversable="false" layoutX="20.0" layoutY="14.0" style="-fx-font-family: 'Trebuchet MS'" text="TimePiece" textFill="grey"> 
+
+                    <font> 
+
+                        <Font size="35.0" /> 
+
+                    </font> 
+
+                </Label> 
+
+                <FontAwesomeIconView disable="true" fill="grey" glyphName="DESKTOP" layoutX="240.0" layoutY="120.0" selectionEnd="1" selectionStart="1" size="90"> 
+
+                    <font> 
+
+                        <Font size="1.0" /> 
+
+                    </font> 
+
+                </FontAwesomeIconView> 
+
+                <ImageView disable="true" fitHeight="50.0" fitWidth="85.0" layoutX="246.0" layoutY="49.0" pickOnBounds="true"> 
+
+                    <image> 
+
+                        <Image url="@TimePieceFlip.png" /> 
+
+                    </image> 
+
+                </ImageView> 
+
+            </children> 
+
+            <effect> 
+
+                <DropShadow blurType="GAUSSIAN" color="#bababa" height="50.0" offsetX="7.0" offsetY="7.0" radius="24.5" width="50.0"> 
+
+                    <input> 
+
+                        <DropShadow blurType="GAUSSIAN" color="#fcfcfc" height="50.0" offsetX="-7.0" offsetY="-7.0" radius="24.5" width="50.0" /> 
+
+                    </input> 
+
+                </DropShadow> 
+
+            </effect> 
+
+        </Pane> 
+
+        <Pane fx:id="aDoMusic" layoutX="50.0" layoutY="480.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseEntered="#adoMusicHovered" onMouseExited="#adoMusicNotHovered" onMousePressed="#loadMusicplayer" prefHeight="170.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(to bottom right, #c5c5c5, #eaeaea); -fx-background-radius: 20;" styleClass="aDoMusic"> 
+
+            <children> 
+
+                <Label focusTraversable="false" layoutX="20.0" layoutY="14.0" style="-fx-font-family: 'Trebuchet MS'" text="aDo Music" textFill="grey"> 
+
+                    <font> 
+
+                        <Font size="35.0" /> 
+
+                    </font> 
+
+                </Label> 
+
+                <FontAwesomeIconView disable="true" fill="grey" glyphName="MUSIC" layoutX="190.0" layoutY="110.0" selectionEnd="1" selectionStart="1" size="70"> 
+
+                    <font> 
+
+                        <Font size="1.0" /> 
+
+                    </font> 
+
+                </FontAwesomeIconView> 
+
+            </children> 
+
+            <effect> 
+
+                <DropShadow blurType="GAUSSIAN" color="#bababa" height="50.0" offsetX="7.0" offsetY="7.0" radius="24.5" width="50.0"> 
+
+                    <input> 
+
+                        <DropShadow blurType="GAUSSIAN" color="#fcfcfc" height="50.0" offsetX="-7.0" offsetY="-7.0" radius="24.5" width="50.0" /> 
+
+                    </input> 
+
+                </DropShadow> 
+
+            </effect> 
+
+        </Pane> 
+
+        <Pane fx:id="NoteBook" layoutX="810.0" layoutY="260.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseEntered="#notebookHovered" onMouseExited="#notebookNotHovered" onMousePressed="#loadNotepad" prefHeight="170.0" prefWidth="355.0" style="-fx-background-color: linear-gradient(to bottom right, #c5c5c5, #eaeaea); -fx-background-radius: 20;" styleClass="NoteBook"> 
+
+            <children> 
+
+               
+
+                <Label focusTraversable="false" layoutX="20.0" layoutY="14.0" style="-fx-font-family: 'Trebuchet MS'" text="NoteBook" textFill="grey"> 
+
+                    <font> 
+
+                        <Font size="35.0" /> 
+
+                    </font> 
+
+                </Label> 
+
+                <FontAwesomeIconView disable="true" fill="grey" glyphName="BOOK" layoutX="220.0" layoutY="115.0" selectionEnd="1" selectionStart="1" size="80"> 
+
+                    <font> 
+
+                        <Font size="1.0" /> 
+
+                    </font> 
+
+                </FontAwesomeIconView> 
+
+            </children> 
+
+            <effect> 
+
+                <DropShadow blurType="GAUSSIAN" color="#bababa" height="50.0" offsetX="7.0" offsetY="7.0" radius="24.5" width="50.0"> 
+
+                    <input> 
+
+                        <DropShadow blurType="GAUSSIAN" color="#fcfcfc" height="50.0" offsetX="-7.0" offsetY="-7.0" radius="24.5" width="50.0" /> 
+
+                    </input> 
+
+                </DropShadow> 
+
+            </effect> 
+
+        </Pane> 
+
+        <Pane fx:id="PomodoroPage" layoutX="455.0" layoutY="260.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseEntered="#pomodoroHovered" onMouseExited="#pomodoroNotHovered" onMousePressed="#loadPomodoro" prefHeight="170.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(to bottom right, #c5c5c5, #eaeaea); -fx-background-radius: 20;" styleClass="Pomodoro"> 
+
+            <children> 
+
+                <Label focusTraversable="false" layoutX="20.0" layoutY="14.0" style="-fx-font-family: 'Trebuchet MS'" text="Pomodoro" textFill="grey"> 
+
+                    <font> 
+
+                        <Font size="35.0" /> 
+
+                    </font> 
+
+                </Label> 
+
+                <FontAwesomeIconView disable="true" fill="grey" glyphName="HOURGLASS_1" layoutX="150.0" layoutY="125.0" selectionEnd="1" selectionStart="1" size="60"> 
+
+                    <font> 
+
+                        <Font size="1.0" /> 
+
+                    </font> 
+
+                </FontAwesomeIconView> 
+
+                <FontAwesomeIconView disable="true" fill="grey" glyphName="HOURGLASS_2" layoutX="215.0" layoutY="125.0" selectionEnd="1" selectionStart="1" size="60"> 
+
+                    <font> 
+
+                        <Font size="1.0" /> 
+
+                    </font> 
+
+                </FontAwesomeIconView> 
+
+            </children> 
+
+            <effect> 
+
+                <DropShadow blurType="GAUSSIAN" color="#bababa" height="50.0" offsetX="7.0" offsetY="7.0" radius="24.5" width="50.0"> 
+
+                    <input> 
+
+                        <DropShadow blurType="GAUSSIAN" color="#fcfcfc" height="50.0" offsetX="-7.0" offsetY="-7.0" radius="24.5" width="50.0" /> 
+
+                    </input> 
+
+                </DropShadow> 
+
+            </effect> 
+
+        </Pane> 
+
+        <Pane fx:id="TaskScheme" layoutX="50.0" layoutY="260.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseEntered="#taskSchemeHovered" onMouseExited="#taskSchemeNotHovered" onMousePressed="#loadTaskScheme" prefHeight="170.0" prefWidth="350.0" style="-fx-background-color: linear-gradient(to bottom right, #c5c5c5, #eaeaea); -fx-background-radius: 20;" styleClass="TaskScheme"> 
+
+            <effect> 
+                <DropShadow blurType="GAUSSIAN" color="#bababa" height="50.0" offsetX="7.0" offsetY="7.0" radius="24.5" width="50.0"> 
+                    <input> 
+                        <DropShadow blurType="GAUSSIAN" color="#fcfcfc" height="50.0" offsetX="-7.0" offsetY="-7.0" radius="24.5" width="50.0" /> 
+                    </input> 
+
+                </DropShadow> 
+
+            </effect>
+         <children>
+            <Label focusTraversable="false" layoutX="20.0" layoutY="14.0" style="-fx-font-family: 'Trebuchet MS'" text="Task Scheme" textFill="grey">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView disable="true" fill="grey" glyphName="CHECK_SQUARE" layoutX="230.0" layoutY="130.0" selectionEnd="1" selectionStart="1" size="80">
+               <font>
+                  <Font size="1.0" />
+               </font>
+            </FontAwesomeIconView>
+         </children> 
+
+        </Pane> 
+
+        <Pane layoutX="455.0" layoutY="50.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="170.0" prefWidth="300.0" style="-fx-background-color: linear-gradient(to bottom right, #c5c5c5, #eaeaea); -fx-background-radius: 20;" visible="false"> 
+
+            <effect> 
+
+                <DropShadow blurType="GAUSSIAN" color="#bababa" height="50.0" offsetX="7.0" offsetY="7.0" radius="24.5" width="50.0"> 
+
+                    <input> 
+
+                        <DropShadow blurType="GAUSSIAN" color="#fcfcfc" height="50.0" offsetX="-7.0" offsetY="-7.0" radius="24.5" width="50.0" /> 
+
+                    </input> 
+
+                </DropShadow> 
+
+            </effect> 
+
+        </Pane>
+      <MenuButton fx:id="bgButton" alignment="CENTER" focusTraversable="false" layoutX="1045.0" layoutY="39.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="120.0" style="-fx-background-radius: 15;" styleClass="appearance" stylesheets="@notebookStyleCss.css" text="Appearance" textAlignment="CENTER" textFill="grey">
+         <items>
+            <MenuItem mnemonicParsing="false"  style="-fx-background-radius: 15; -fx-text-fill: #fffafa; -fx-pref-height: 42px; -fx-pref-width: 141px; -fx-alignment: center;" styleClass="appLight" text="Light">
+               <graphic>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="42.0" prefWidth="0.0">
+                     <children>
+                        <Label fx:id="lightMark" focusTraversable="false" layoutX="90.0" layoutY="11.0" text="☑" textFill="#008300">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </graphic>
+            </MenuItem>
+            <MenuItem mnemonicParsing="false" onAction="#changeBGtoDark" style="-fx-background-radius: 15; -fx-alignment: center; -fx-text-fill: #fffafa; -fx-pref-height: 42px; -fx-pref-width: 141px;" styleClass="appDark" text="Dark">
+               <graphic>
+                  <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="42.0" prefWidth="0.0">
+                     <children>
+                        <Label fx:id="darkMark" focusTraversable="false" layoutX="90.0" layoutY="11.0" text="☑" textFill="#008300">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </graphic>
+            </MenuItem>
+         </items>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#bababa" height="35.0" offsetX="7.0" offsetY="7.0" radius="17.0" width="35.0">
+               <input>
+                  <DropShadow blurType="GAUSSIAN" color="#fcfcfc" height="35.0" offsetX="-4.0" offsetY="-4.0" radius="17.0" width="35.0" />
+               </input>
+            </DropShadow>
+         </effect>
+      </MenuButton> 
+
+         
+
+    </children> 
+
+</AnchorPane>

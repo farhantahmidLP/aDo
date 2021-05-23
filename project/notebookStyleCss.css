@@ -1,0 +1,276 @@
+.root 
+{ 
+    -fx-font-family:"Trebuchet MS" !important; 
+} 
+.thumb 
+{ 
+    -fx-background-color: transparent; 
+    -fx-opacity: 0.0; 
+} 
+.track 
+{ 
+    -fx-background-color: transparent; 
+    -fx-opacity: 0.0; 
+} 
+.scroll-bar .increment-arrow, 
+.scroll-bar .decrement-arrow{ 
+    -fx-shape : ""; 
+    -fx-background-color:transparent; 
+} 
+.menu-bar { 
+    -fx-background-color: black ; 
+    -fx-opacity: 0.5; 
+    -fx-background-radius: 20px; 
+} 
+.menu-bar .label  
+{ 
+    -fx-font-family: "Bookman Old Style"; 
+    -fx-text-fill: white; 
+    -fx-font-weight: bold; 
+    -fx-padding: 4.0px; 
+} 
+.menu-bar .menu-button:hover, .menu-bar .menu-button:focused, .menu-bar .menu-button:showing {  
+    -fx-background: black; 
+    -fx-opacity: 0.5; 
+    -fx-text-fill: grey; 
+} 
+.context 
+{ 
+    -fx-background-color:  black; 
+    -fx-border-color: white; 
+    -fx-border-width: 2px; 
+    -fx-opacity: 0.7; 
+} 
+.context:hover 
+{ 
+    -fx-background-color: black; 
+    -fx-opacity: 0.8; 
+    -fx-scale-y: 0.95; 
+    -fx-scale-x: 0.95; 
+} 
+.hyperlink { 
+    -fx-border-color: transparent; 
+} 
+.toggleButton{ 
+    align-items: center; 
+    -fx-background-color: linear-gradient(to bottom right, #c5c5c5, #eaeaea); 
+    -fx-background-radius: 15; 
+} 
+.usernameBox{ 
+    -fx-background-color: linear-gradient(from 0% 130% to 6% 220%, #434a70, #515985); 
+    -fx-background-radius: 15; 
+    -fx-effect: innershadow(gaussian, #2a2d41, 29, 0, 4.3, 4.3); 
+    -fx-text-fill:#ffffff; 
+} 
+.button{ 
+    align-items: center; 
+    -fx-background-color: linear-gradient(to bottom right, #c5c5c5, #eaeaea); 
+    -fx-background-radius: 15; 
+} 
+.button:pressed{ 
+    -fx-cursor: hand; 
+    -fx-effect: innershadow(gaussian, #afafaf, 20, 0, 4.12, 4.12); 
+    -fx-background-color: #dbdbdb; 
+    -fx-border-width:0; 
+    -fx-border-insets:0; 
+    -fx-border-color:white; 
+    -fx-background-radius: 15; 
+} 
+.outerShadowButton{ 
+    -fx-background-radius: 15; 
+    -fx-background-color: #dbdbdb; 
+    -fx-rotate:180; 
+} 
+.toggleButton:selected{ 
+    align-items: center; 
+    -fx-effect: innershadow(gaussian, #afafaf, 20, 0, 4.12, 4.12); 
+    -fx-background-color: #dbdbdb; 
+    -fx-border-width:0; 
+    -fx-border-insets:0; 
+    -fx-border-color:white; 
+    -fx-background-radius: 15; 
+} 
+.minimize 
+{ 
+    -fx-background-color: linear-gradient(to bottom right, #c28619, #ffc863); 
+    -fx-stroke-width: 50; 
+    -fx-text-fill : white; 
+    -fx-background-radius: 50%; 
+    -fx-color: white; 
+} 
+.minimize:hover 
+{ 
+    -fx-text-fill : white; 
+    -fx-effect: innershadow(gaussian, #656566, 25, 0, 4.12, 4.12); 
+} 
+.exit 
+{ 
+    -fx-background-color: linear-gradient(to bottom right, #bf211d, #ff6561); 
+    -fx-stroke-width: 20; 
+    -fx-background-radius: 50%; 
+    -fx-color: white; 
+    -fx-text-fill : white; 
+} 
+.exit:hover 
+{  
+    -fx-text-fill : white; 
+    -fx-effect: innershadow(gaussian, #656566, 25, 0, 4.12, 4.12); 
+} 
+.noteArea 
+{ 
+    -fx-border-color:#dbdbdb; 
+    -fx-background-insets: 50; 
+    -fx-background-radius:15px; 
+    -fx-border-width:15px; 
+    -fx-border-radius:10px; 
+    -fx-focus-color: -fx-control-inner-background ; 
+    -fx-faint-focus-color: -fx-control-inner-background ; 
+    -fx-effect: innershadow(gaussian, #bababa, 40, 0, 18, 18); 
+} 
+.noteArea .scroll-pane 
+{ 
+    -fx-hbar-policy: never; 
+    -fx-vbar-policy: never; 
+} 
+.background { 
+    -fx-background-radius: 15px; 
+} 
+.dropDown{ 
+    -fx-background-color: linear-gradient(to bottom right, #c5c5c5, #eaeaea); 
+} 
+.dropColor{ 
+    -fx-background-radius: 15; 
+    -fx-padding: 0px; 
+    -fx-background-insets : 2px; 
+    -fx-background-color: linear-gradient(to bottom right, #c5c5c5, #eaeaea); 
+} 
+.dropTextSize{ 
+    -fx-padding: 0px; 
+    -fx-background-radius: 15; 
+    -fx-background-insets : 2px; 
+    -fx-background-color: linear-gradient(to bottom right, #c5c5c5, #eaeaea); 
+} 
+.dropColor:hover{ 
+    -fx-effect: innershadow(gaussian, #afafaf, 20, 0, 4.12, 4.12); 
+    -fx-background-color: #dbdbdb; 
+    -fx-scale-x: 0.95; 
+    -fx-scale-y: 0.95; 
+} 
+.dropTextSize:hover{ 
+    -fx-effect: innershadow(gaussian, #afafaf, 20, 0, 4.12, 4.12); 
+    -fx-background-color: #dbdbdb; 
+    -fx-scale-x: 0.95; 
+    -fx-scale-y: 0.95; 
+} 
+.context-menu { 
+    -fx-background-color: linear-gradient(to top left, #c5c5c5, #eaeaea); 
+    -fx-background-ofsets: 10; 
+    -fx-background-radius: 10px; 
+} 
+.color-palette .hyperlink 
+{ 
+    visibility: hidden; 
+} 
+.color-palette{ 
+    -fx-background-color: linear-gradient(to bottom right, #c5c5c5, #eaeaea); 
+    -fx-effect: innershadow(gaussian, #aaaaaa, 50, 0, 10, 10); 
+} 
+.color-picker { 
+    -fx-background-size: 20 20; 
+} 
+.color-picker .color-picker-label .picker-color { 
+    -fx-alignment : bottom-center; 
+} 
+.colorPicker{ 
+    -fx-background-color: linear-gradient(to bottom right, #c5c5c5, #eaeaea); 
+    -fx-text-fill:GREY; 
+    -fx-color:GREY; 
+} 
+.colorPicker:hover{ 
+    -fx-effect: innershadow(gaussian, #afafaf, 20, 0, 5, 5); 
+    -fx-background-color: #dbdbdb; 
+    -fx-scale-x: 0.97; 
+    -fx-scale-y: 0.97; 
+} 
+.slider .thumb 
+{ 
+    -fx-background-color: linear-gradient(to bottom right, #4f4f4f, #cfcfcf); 
+    -fx-opacity: 1; 
+} 
+.slider .track 
+{ 
+    -fx-background-color: #adadad; 
+    -fx-opacity: 1; 
+} 
+.appLight, .appDark, .fileChooser{ 
+    -fx-background-radius: 15; 
+    -fx-padding: 0px; 
+    -fx-background-insets : 2px; 
+    -fx-background-color: linear-gradient(to bottom right, #c5c5c5, #eaeaea); 
+} 
+.appLight:hover, .appDark:hover, .fileChooser:hover{ 
+    -fx-effect: innershadow(gaussian, #afafaf, 20, 0, 4.12, 4.12); 
+    -fx-background-color: #dbdbdb; 
+    -fx-scale-x: 0.95; 
+    -fx-scale-y: 0.95; 
+} 
+.context-menu { 
+    -fx-background-color: linear-gradient(to top left, #c5c5c5, #eaeaea); 
+    -fx-background-ofsets: 10; 
+    -fx-background-radius: 10px; 
+} 
+.appearance,.fileButton 
+{ 
+    -fx-background-color: linear-gradient(to bottom right, #c5c5c5, #eaeaea); 
+} 
+.appearance:hover,.fileButton:hover 
+{ 
+    -fx-scale-x: 0.95; 
+    -fx-scale-y: 0.95; 
+} 
+.innerPane 
+{ 
+    -fx-effect: innershadow(gaussian, white, 30, 0, 6, 6); 
+    -fx-background-color: transparent; 
+} 
+.list-cell{ 
+    -fx-background-color: #42476c; 
+    -fx-alignment: center; 
+    -fx-background-radius: 3px; 
+    -fx-padding:10px; 
+} 
+.list-cell:hover 
+{ 
+    -fx-background-color: #4e5378; 
+    -fx-effect: innershadow(gaussian, #26293b, 50, 0, 10.12, 10.12); 
+} 
+.list-view .scroll-bar { 
+    -fx-background-color: transparent; 
+} 
+.list-view .corner 
+{ 
+    -fx-background-color: transparent; 
+} 
+.list-cell:filled:selected { 
+    -fx-background-insets: 0 ; 
+} 
+.list-view 
+{ 
+    -fx-background-color: transparent; 
+} 
+.list-view:focused 
+{ 
+    -fx-focus-color: transparent;  
+} 
+.list-view .thumb .track 
+{ 
+    -fx-background-color: transparent; 
+} 
+.choice-box { 
+     -fx-mark-color: grey; 
+} 
+
+.choice-box > .label { -fx-text-fill: grey; -fx-alignment:CENTER;} 
+.choice-box .menu-item:focused { -fx-background-color: grey; -fx-alignment:CENTER;}  
+.choice-box .menu-item > .label { -fx-text-fill: grey; -fx-alignment:CENTER;} 
+.choice-box .menu-item:focused > .label { -fx-text-fill: grey; -fx-alignment:CENTER;} 

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+
+<AnchorPane fx:id="AnchorPane" style="-fx-background-radius: 30; -fx-border-radius: 30;" prefWidth="1200" prefHeight="700" styleClass="login_root" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Login_UI_Controller">
+    <children>
+        <TextField fx:id="changeTextBox" focusTraversable="false" layoutX="570.0" layoutY="359.0" prefHeight="27.0" prefWidth="0.0" style="-fx-background-color: white " />
+        <ImageView fx:id="imageView" depthTest="ENABLE" fitHeight="700" fitWidth="1200" nodeOrientation="INHERIT" onDragDetected="#makeDragable" onMousePressed="#cursorMove" pickOnBounds="true">
+        </ImageView>
+      
+        <Button fx:id="minButton" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="60.0" layoutY="27.0" mnemonicParsing="false" onAction="#minScreen" prefHeight="19.0" prefWidth="20.0" styleClass="minimize" stylesheets="@Style.css" text="—">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <font>
+                <Font name="System Bold" size="7.0" />
+            </font>
+        </Button>
+        <Button fx:id="closeButton" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="26.0" layoutY="27.0" mnemonicParsing="false" onAction="#closeScreen" prefHeight="19.0" prefWidth="20.0" styleClass="exit" text="X" textFill="WHITE">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <font>
+                <Font size="9.0" />
+            </font>
+        </Button>
+   
+       
+        <Pane fx:id="containerPane" layoutX="449.0" layoutY="186.0" onMousePressed="#cursorMove" prefHeight="360.0" prefWidth="303.0" style="-fx-background-color: #42476c; -fx-background-radius: 20;" styleClass="containerPane" stylesheets="@Style.css">
+            <children>    
+                <Label layoutX="39.0" layoutY="26.0" text="Login or Sign up to continue" textFill="#bfbfbf">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="username" alignment="CENTER" focusTraversable="false" layoutX="48.0" layoutY="65.0" prefHeight="42.0" prefWidth="208.0" promptText="Username" styleClass="usernameBox" stylesheets="@style.css">
+                </TextField>
+                <PasswordField fx:id="password" alignment="CENTER" focusTraversable="false" layoutX="48.0" layoutY="120.0" prefHeight="42.0" prefWidth="208.0" promptText="Password" styleClass="usernameBox" stylesheets="@style.css" />
+                <Button fx:id="login" layoutX="80.0" layoutY="228.0" mnemonicParsing="false" onAction="#verify" onMousePressed="#selected" onMouseReleased="#released" prefHeight="42.0" prefWidth="141.0" stylesheets="@style.css" text="Log In" textFill="white">
+                    <effect>
+                        <DropShadow blurType="GAUSSIAN" color="#333850" height="35.0" offsetX="7.0" offsetY="7.0" radius="17.0" width="35.0">
+                            <input>
+                                <DropShadow blurType="GAUSSIAN" color="#545d7d" height="35.0" offsetX="-4.0" offsetY="-4.0" radius="17.0" width="35.0" />
+                            </input>
+                        </DropShadow>
+                    </effect>
+                </Button>
+                <Hyperlink fx:id="signUp" layoutX="118.0" layoutY="312.0" onAction="#loadSignup" text="Sign Up!" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Hyperlink>
+                <Label layoutX="90.0" layoutY="289.0" text="Don't have an account?" textFill="#bfbfbf" />
+                <Hyperlink layoutX="69.0" layoutY="179.0" onAction="#loadRecovery" text="Forgot your password?" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Hyperlink>
+                <Button fx:id="outerShadowButtonLogin" disable="true" focusTraversable="false" layoutX="81.0" layoutY="228.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="141.0" styleClass="outerShadowButton" stylesheets="@style.css" />
+                
+                <FontAwesomeIconView fx:id="userIcon" fill="#8c8c8ccd" glyphName="USER" layoutX="67.0" layoutY="92.0" size="17" styleClass="userIcon" />
+                <FontAwesomeIconView fx:id="passIcon" fill="#8c8c8ccd" glyphName="LOCK" layoutX="67.0" layoutY="147.0" size="17" styleClass="passIcon" />
+                
+            </children>
+           
+            <effect>
+                <DropShadow blurType="GAUSSIAN" color="#0d1328" height="35.0" offsetX="8.0" offsetY="8.0" radius="17.0" width="35.0">
+                    <input>
+                        <DropShadow blurType="GAUSSIAN" color="#fcfcfc" height="35.0" offsetX="-7.0" offsetY="-7.0" radius="17.0" width="35.0" />
+                    </input>
+                </DropShadow>
+            </effect>
+        </Pane>
+      
+    </children>
+</AnchorPane>

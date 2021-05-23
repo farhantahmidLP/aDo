@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+ 
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+ 
+
+<AnchorPane fx:id="AnchorPane" style="-fx-background-radius: 30; -fx-border-radius: 30;" styleClass="signup_root" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Signup_UI_Controller">
+    <children>
+        <TextField fx:id="changeTextBox" focusTraversable="false" layoutX="570.0" layoutY="359.0" prefHeight="27.0" prefWidth="0.0" style="-fx-background-color: white" />
+        <ImageView onMousePressed="#cursorMove" fx:id="image_view" depthTest="ENABLE" fitHeight="700.0" fitWidth="1200.0" nodeOrientation="INHERIT" onDragDetected="#make_draggable" pickOnBounds="true">
+        </ImageView>
+        <Button fx:id="min_button" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="60.0" layoutY="27.0" mnemonicParsing="false" onAction="#min_screen" prefHeight="19.0" prefWidth="20.0" styleClass="minimize" stylesheets="@Style.css" text="—">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <font>
+                <Font name="System Bold" size="7.0" />
+            </font>
+        </Button>
+        <Button fx:id="close_button" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" layoutX="26.0" layoutY="27.0" mnemonicParsing="false" onAction="#close_screen" prefHeight="19.0" prefWidth="20.0" styleClass="exit" text="X" textFill="WHITE">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <font>
+                <Font size="9.0" />
+            </font>
+        </Button>
+        <Pane fx:id="containerPane" layoutX="449.0" layoutY="186.0" onMousePressed="#cursorMove" prefHeight="358.0" prefWidth="300.0" style="-fx-background-color: #42476c ; -fx-background-radius: 20;  " styleClass="containerPane" stylesheets="@Style.css">
+            <effect>
+                <DropShadow blurType="GAUSSIAN" color="#0d1328" height="35.0" offsetX="8.0" offsetY="8.0" radius="17.0" width="35.0">
+                    <input>
+                        <DropShadow blurType="GAUSSIAN" color="#fcfcfc" height="35.0" offsetX="-7.0" offsetY="-7.0" radius="17.0" width="35.0" />
+                    </input>
+                </DropShadow>
+            </effect>
+            <children>    
+                <Label alignment="CENTER" layoutX="115.0" layoutY="12.0" text="Sign Up" textFill="#bfbfbf">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="user_name" alignment="CENTER" focusTraversable="false" layoutX="46.0" layoutY="53.0" prefHeight="42.0" prefWidth="208.0" promptText="Username" styleClass="usernameBox" stylesheets="@style.css">
+                </TextField>
+                <TextField fx:id="email_id" alignment="CENTER" focusTraversable="false" layoutX="44.0" layoutY="111.0" prefHeight="42.0" prefWidth="208.0" promptText="email" styleClass="usernameBox" stylesheets="@style.css">
+                </TextField>
+                <PasswordField fx:id="pass_word" alignment="CENTER" focusTraversable="false" layoutX="44.0" layoutY="168.0" prefHeight="42.0" prefWidth="208.0" promptText="Password" styleClass="usernameBox" stylesheets="@style.css" />
+                <Button fx:id="sign_up" alignment="CENTER" layoutX="78.0" layoutY="237.0" mnemonicParsing="false" onAction="#sign_up" onMousePressed="#selected" onMouseReleased="#released" prefHeight="42.0" prefWidth="141.0" stylesheets="@style.css" text="Sign Up" textFill="white">
+                    <effect>
+                        <DropShadow blurType="GAUSSIAN" color="#333850" height="35.0" offsetX="7.0" offsetY="7.0" radius="17.0" width="35.0">
+                            <input>
+                                <DropShadow blurType="GAUSSIAN" color="#545d7d" height="35.0" offsetX="-4.0" offsetY="-4.0" radius="17.0" width="35.0" />
+                            </input>
+                        </DropShadow>
+                    </effect>
+                </Button>
+                
+                <Hyperlink fx:id="back" alignment="CENTER" layoutX="64.0" layoutY="303.0" onAction="#changeto_login" text="Already have an account?" textFill="WHITE">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Hyperlink>
+                <Button fx:id="outerShadowButtonSignup" alignment="CENTER" disable="true" focusTraversable="false" layoutX="77.0" layoutY="237.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="141.0" styleClass="outerShadowButton" stylesheets="@style.css" />
+                <FontAwesomeIconView fx:id="userIcon" fill="#8c8c8ccd" glyphName="USER" layoutX="67.0" layoutY="80.0" size="17" styleClass="userIcon" />
+                <FontAwesomeIconView fx:id="emailIcon" fill="#8a8a8acc" glyphName="ENVELOPE" layoutX="65.0" layoutY="138.0" size="17" styleClass="emailIcon" />
+                <FontAwesomeIconView fx:id="passIcon" fill="#8a8a8acc" glyphName="LOCK" layoutX="68.0" layoutY="195.0" size="17" styleClass="passIcon" />
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
+ 

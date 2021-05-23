@@ -1,0 +1,46 @@
+.list-view .scroll-bar:vertical {
+    -fx-scale-x: 0;
+}
+.list-view .scroll-bar:horizontal {
+    -fx-scale-x: 0;
+}
+
+
+
+
+
+.list-cell{
+    -fx-background-color: #dbdbdb;
+    -fx-alignment: center;
+    -fx-background-radius: 20px;
+    -fx-padding:10px;
+}
+
+.list-cell:hover
+{
+    -fx-background-color: #dbdbdb;
+}
+.list-view .scroll-bar {
+    -fx-background-color: transparent;
+}
+.list-view .corner
+{
+    -fx-background-color: transparent;
+}
+
+.list-cell:filled:selected {
+    -fx-background-insets: 0 ;
+}
+.list-view
+{
+    -fx-background-color: #dbdbdb;
+}
+.list-view:focused
+{
+    -fx-focus-color: #dbdbdb; 
+}
+.list-view .thumb .track
+{
+    -fx-background-color: transparent;
+}
+

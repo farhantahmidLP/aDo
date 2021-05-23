@@ -1,0 +1,31 @@
+*, a, abbr, acronym, address, applet, b, big, blockquote, body, br, button, caption, center, cite, code, dd, del, dfn, div,
+dl, dt, element, em, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, head, header, html, html, i, iframe, iframe, img, 
+img, input, ins, kbd, label, label, legend, li, link, meta, nav, noscript, object, ol, ol, p, path, pre, q, s, samp, script,
+small, span, strike, strong, style, sub, sup, svg, table, tbody, td, textarea, tfoot, th, thead, title, tr, tt, u, ul, var { 
+    background-color: #42476c; border-color: #42476c; background: #42476c; color: #42476c; 
+}
+#name a{
+    color:#42476c;
+}
+.player {
+    background-color: #42476c; 
+}
+#time, #ctime, #volLabel
+{
+    color: white;
+    font-size: 14px;
+    font-weight: bolder;
+}
+#name
+{
+    color: transparent;
+    background-color: transparent;
+    text-decoration: none;
+}
+button
+{
+    color: blue;
+    background-color: #4CAF50;
+}
+
+      

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+
+<AnchorPane fx:id="AnchorPane" prefHeight="270" prefWidth="480" style="-fx-background-radius: 30; -fx-border-radius: 30; -fx-background-color: linear-gradient(to bottom right, #e0e0e0, #d1d1d1);" styleClass="login_root" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Loading_UI_Controller">
+    <children>
+        <ImageView fx:id="upperView" depthTest="ENABLE" fitHeight="80" fitWidth="80" LayoutX="200" layoutY="80" nodeOrientation="INHERIT"  pickOnBounds="true">
+        </ImageView>
+        <ImageView fx:id="imageView" depthTest="ENABLE" fitHeight="80" fitWidth="80" LayoutX="200" layoutY="80" nodeOrientation="INHERIT"  pickOnBounds="true">
+        </ImageView>
+        <Label layoutX="155.0" layoutY="190.0" text="Starting aDo..." style="-fx-font-size: 30; -fx-font-family: Trebuchet MS !important; -fx-font-weight: 100;" textFill="#666666" />
+    </children>
+</AnchorPane>
+
